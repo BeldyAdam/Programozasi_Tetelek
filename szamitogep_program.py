@@ -33,3 +33,40 @@ for i in range(len(szamitogepek)):
         max_index = i
 
 print(szamitogepek[max_index].oprsz)
+
+
+
+lista = len(szamitogepek)
+ker = szamitogepek[0]
+i = 0
+van = True
+while i < lista and szamitogepek[i] != ker:
+    i = i + 1
+if i < lista:
+    print("Van ilyen: ", szamitogepek[i].oprsz,szamitogepek[i].ram)
+else:
+    van = False
+
+#masik megoldas
+
+van2 = False
+vizsgaltRam = 16
+for i in range(len(szamitogepek)):
+    if szamitogepek[i].ram > vizsgaltRam and szamitogepek[i].oprsz == "win":
+        van2 = True
+#        print("Van", szamitogepek[i].oprsz, szamitogepek[i].ram)
+
+if van2 == True:
+    print("Van")
+else:
+    print("nincs")
+
+#megszamlalas tetele
+print("Hány windowos gepunk van?")
+db = 0
+for i in range(len(szamitogepek)):
+    if szamitogepek[i].oprsz == "win":
+        db +=1
+print(db)
+
+
